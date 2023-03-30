@@ -12,7 +12,7 @@ services:
       - node-network
     ports:
       - "3000:3000"
-    entrypoint: wait-for db:3306 -t 40 -- npm start
+    entrypoint: wait-for db:3306 -t 40 -- sh ./initialize.sh
     depends_on:
       - db
   db:

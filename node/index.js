@@ -5,9 +5,6 @@ import { generateName } from "./randomNames/index.js";
 const app = express();
 const port = 3000;
 
-// create table people(id int not null auto_increment, name varchar(255), 
-// primary key(id));
-
 createConnection();
 
 process.on("exit", () => closeConnection());

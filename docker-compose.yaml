@@ -2,7 +2,8 @@ version: "3"
 
 services:
   nginx:
-    image: lcassiol/nginx:prod
+    build:
+      context: nginx
     container_name: nginx
     networks:
       - node-network

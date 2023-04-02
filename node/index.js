@@ -13,7 +13,7 @@ app.get("/", async (req, res) => {
   const randomName = await generateName();
   await insertName(randomName);
   const people = await getAllNames();
-  res.send(`<h1>Full Cycle</h1>
+  res.send(`<h1>Full Cycle Rocks!</h1>
             <ul>${people.map(people => `<li>${people.name}</li>`).join("")}</ul>`);
 });
 
